@@ -10,7 +10,7 @@ function calculator ($num1, $num2,$action) {
 	elseif($action == "*") {
 		return $num1 * $num2;
 	}
-	elseif($action == "/" && $num1 >= 1 || $num2 >= 1) {   //не знаю только как указать, условия если $num1 и 2 >0
+	elseif($action == "/" && $num1 >= 1 || $num2 >= 1) {
 		return $num1 / $num2;
 	}
 	elseif($action == "/" && $num2 == 0) {
