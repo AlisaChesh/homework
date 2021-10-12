@@ -5,6 +5,10 @@ header('Content-Type: text/html; charset=utf-8');
 
 echo '<pre>'.print_r($_GET,1).'</pre>';
 
+$num1= $_GET['num1'];
+$num2= $_GET['num2'];
+$action= $_GET['action'];
+
 
 function calculator ($num1, $num2, $action) {
 	if($action == "+") {
@@ -17,15 +21,15 @@ function calculator ($num1, $num2, $action) {
 		return  "К сожалению, мы не можем делить число на 0 ¯\_(ツ)_/¯";
 	} else {
 		return ($num1 / $num2);
-	}                                 //наша функция, тут мне кажется у меня пробел того, как можно определить эту функцию в переменную
+	}
 }
-$sum = calculator ($num1, $num2, $action); //вот была вот такая попытка, такую переменную я пыталась сделать в самой функции, но тоже, видать, неправильно было.
+
+
+if (isset ($_GET['num1'],$_GET['num2'])){
+	echo calculator ($_GET['num1'], $_GET['num2'], $_GET['action']);
+	$sum = calculator ($_GET['num1'], $_GET['num2'], $_GET['action']);
+}
 echo $sum ;
-
-$num1= $_GET['num1']; //здесь создала переменные так, чтобы они получали данные из нашего калькулятора, но у меня выбивается ошибка - Undefined array key.
-$num2= $_GET['num2'];
-$action= $_GET['action'];
-
 
 ?>
 
