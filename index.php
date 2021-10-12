@@ -29,6 +29,7 @@ if (isset ($_GET['num1'],$_GET['num2'])){
 	echo calculator ($_GET['num1'], $_GET['num2'], $_GET['action']);
 	$sum = calculator ($_GET['num1'], $_GET['num2'], $_GET['action']);
 }
+
 echo $sum ;
 
 ?>
